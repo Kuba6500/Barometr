@@ -34,6 +34,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add site/summary.json
+          git add docs/summary.json
           git commit -m "Codzienny briefing: $(date +'%Y-%m-%d')" || echo "Brak zmian do zapisania"
           git push
