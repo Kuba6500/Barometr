@@ -59,8 +59,8 @@ def fetch_symbol(symbol: str):
 
     last = rows[-1]
     prev = rows[-2]
-    close = float(last["Zamkniecie"])
-    prev_close = float(prev["Zamkniecie"])
+    close = float(last["Zamknięcie"])
+    prev_close = float(prev["Zamknięcie"])
     change_pct = ((close - prev_close) / prev_close) * 100 if prev_close else 0.0
 
     return {
