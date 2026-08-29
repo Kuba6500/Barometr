@@ -1,0 +1,200 @@
+/* ============================================================
+   Barometr — tożsamość wizualna
+   Koncepcja: rynek jako "pogoda" — dzienny stan czytany jak
+   prognoza, nie jak panel tradera. Kolor akcentu (tarcza barometru)
+   zmienia się codziennie w zależności od sentymentu danych,
+   zamiast być stałym kolorem marki.
+   ============================================================ */
+
+:root {
+  --ink: #16233A;
+  --paper: #EDF1F5;
+  --paper-raised: #FFFFFF;
+  --line: #C7D0DB;
+  --muted: #5B6B80;
+
+  /* domyślny akcent (nadpisywany dynamicznie przez script.js wg sentymentu) */
+  --accent: #5B6B80;
+  --accent-soft: #DCE2E9;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.masthead {
+  border-bottom: 1px solid var(--line);
+  padding: 56px 24px 40px;
+}
+
+.masthead-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.masthead h1 {
+  font-family: 'Fraunces', serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: clamp(40px, 8vw, 64px);
+  margin: 8px 0 12px;
+  letter-spacing: -0.01em;
+}
+
+.tagline {
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 46ch;
+  margin: 0;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+.loading, .error {
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* --- Tarcza barometru (element sygnaturowy strony) --- */
+
+.dial-section {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 28px;
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  margin-bottom: 40px;
+}
+
+.dial-svg { flex-shrink: 0; }
+
+.dial-needle {
+  transform-origin: 60px 60px;
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.dial-copy .sentiment-label {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 26px;
+  color: var(--accent);
+  margin: 0 0 4px;
+}
+
+.dial-copy .headline {
+  margin: 0;
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.date-stamp {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.overview {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 48px;
+  max-width: 62ch;
+}
+
+/* --- Karty aktywów --- */
+
+.assets-heading {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.asset-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.asset-row {
+  background: var(--paper-raised);
+  padding: 16px 20px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "name change"
+    "comment comment";
+  gap: 4px 12px;
+  align-items: baseline;
+}
+
+.asset-name {
+  grid-area: name;
+  font-weight: 500;
+}
+
+.asset-change {
+  grid-area: change;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.asset-change.up { color: #2F7A4F; }
+.asset-change.down { color: #B0402E; }
+.asset-change.flat { color: var(--muted); }
+
+.asset-comment {
+  grid-area: comment;
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.5;
+  margin: 4px 0 0;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 28px 24px 48px;
+}
+
+#disclaimer {
+  max-width: 720px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 520px) {
+  .dial-section { flex-direction: column; align-items: flex-start; }
+  .asset-row { grid-template-columns: 1fr; grid-template-areas: "name" "change" "comment"; }
+  .asset-change { justify-self: start; }
+}

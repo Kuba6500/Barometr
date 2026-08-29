@@ -1,0 +1,26 @@
+{
+  "date": "2026-08-28",
+  "sentiment_score": -0.3,
+  "sentiment_label": "Lekkie napięcie",
+  "headline": "Światowe indeksy straciły dziś na wartości po słabszych danych o inflacji w USA.",
+  "overview": "To przykładowe dane demonstracyjne — po podłączeniu prawdziwego źródła (patrz README) ten fragment będzie generowany codziennie na podstawie realnych zamknięć rynkowych. Ogólny nastrój dnia jest lekko ostrożny, choć bez paniki — inwestorzy czekają na dalsze dane makroekonomiczne w najbliższych dniach.",
+  "assets": [
+    { "symbol": "WIG", "comment": "GPW zachowała się relatywnie stabilnie na tle rynków zagranicznych." },
+    { "symbol": "^SPX", "comment": "S&P 500 spadł po publikacji danych o inflacji, które okazały się wyższe od oczekiwań." },
+    { "symbol": "^DAX", "comment": "Niemiecki indeks podążył za nastrojami z Wall Street." },
+    { "symbol": "USDPLN", "comment": "Złoty pozostał stabilny wobec dolara mimo zawirowań na rynkach akcji." },
+    { "symbol": "EURPLN", "comment": "Kurs euro bez istotnych zmian." },
+    { "symbol": "XAUUSD", "comment": "Złoto zyskało — typowa reakcja w momentach niepewności na rynkach akcji." },
+    { "symbol": "BTCUSD", "comment": "Bitcoin podążył za spadkowym nastrojem na rynkach ryzykownych aktywów." }
+  ],
+  "raw_assets": [
+    { "symbol": "WIG", "name": "WIG (GPW, Polska)", "close": 91234.5, "change_pct": 0.15 },
+    { "symbol": "^SPX", "name": "S&P 500 (USA)", "close": 5842.3, "change_pct": -1.12 },
+    { "symbol": "^DAX", "name": "DAX (Niemcy)", "close": 18923.7, "change_pct": -0.87 },
+    { "symbol": "USDPLN", "name": "USD/PLN", "close": 4.02, "change_pct": 0.03 },
+    { "symbol": "EURPLN", "name": "EUR/PLN", "close": 4.31, "change_pct": -0.02 },
+    { "symbol": "XAUUSD", "name": "Złoto (USD/uncja)", "close": 2418.6, "change_pct": 0.94 },
+    { "symbol": "BTCUSD", "name": "Bitcoin (USD)", "close": 58210.0, "change_pct": -2.31 }
+  ],
+  "disclaimer": "Materiał ma charakter wyłącznie edukacyjny i informacyjny. Nie stanowi porady ani rekomendacji inwestycyjnej."
+}

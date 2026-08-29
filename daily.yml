@@ -1,0 +1,39 @@
+name: Codzienny briefing rynkowy
+
+on:
+  schedule:
+    # 6:30 UTC = 7:30/8:30 czasu polskiego (w zależności od czasu letniego/zimowego)
+    - cron: "30 6 * * 1-5"
+  workflow_dispatch: {}  # pozwala uruchomić ręcznie z zakładki Actions na GitHubie
+
+permissions:
+  contents: write
+
+jobs:
+  build-briefing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pobierz dane rynkowe
+        run: python scripts/fetch_data.py
+
+      - name: Wygeneruj podsumowanie (Claude)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/generate_summary.py
+
+      - name: Skopiuj wynik na stronę
+        run: cp summary.json site/summary.json
+
+      - name: Zapisz zmiany
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add site/summary.json
+          git commit -m "Codzienny briefing: $(date +'%Y-%m-%d')" || echo "Brak zmian do zapisania"
+          git push
