@@ -28,7 +28,7 @@ jobs:
         run: python scripts/generate_summary.py
 
       - name: Skopiuj wynik na stronę
-        run: cp summary.json site/summary.json
+        run: cp summary.json docs/summary.json
 
       - name: Zapisz zmiany
         run: |
