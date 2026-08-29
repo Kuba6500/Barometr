@@ -1,10 +1,10 @@
 {
-  "sentiment_score": 0,
+  "sentiment_score": 0.0,
   "sentiment_label": "Brak danych",
-  "headline": "Brak danych rynkowych – nie można ocenić dzisiejszego dnia.",
-  "overview": "Otrzymane dane nie zawierają żadnych informacji o aktywach ani ich wycenach na dzień 29 sierpnia 2026 roku. Bez konkretnych liczb i notowań nie jest możliwe rzetelne opisanie sytuacji rynkowej. Zamiast zgadywać lub wypełniać luki domysłami, uczciwie informujemy o braku podstaw do jakiegokolwiek podsumowania.",
+  "headline": "Brak danych rynkowych na ten dzień — nie ma podstaw do żadnych wniosków.",
+  "overview": "Na dzień 2026-08-29 nie otrzymałem żadnych danych o cenach ani zmianach aktywów. Nie jestem w stanie opisać nastrojów rynkowych, kierunków ani wydarzeń dnia. Zamiast zgadywać lub wypełniać luki domysłami, sygnalizuję wprost: dane są puste.",
   "assets": [],
-  "disclaimer": "To materiał wyłącznie edukacyjny, a ze względu na brak danych – w tym przypadku jedynie metodologiczny. Nie stanowi porady inwestycyjnej ani rekomendacji. Wszelkie decyzje finansowe podejmuj samodzielnie lub z pomocą licencjonowanego doradcy.",
+  "disclaimer": "To jest materiał wyłącznie edukacyjny i informacyjny. Nie stanowi porady inwestycyjnej ani rekomendacji zakupu lub sprzedaży jakichkolwiek instrumentów finansowych. Wszelkie decyzje inwestycyjne podejmujesz na własną odpowiedzialność.",
   "date": "2026-08-29",
   "raw_assets": []
 }
