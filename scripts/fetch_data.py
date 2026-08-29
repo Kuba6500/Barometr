@@ -51,20 +51,33 @@ def fetch_symbol(symbol: str):
     url = STOOQ_URL.format(symbol=symbol)
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req, timeout=15) as resp:
-        raw = resp.read().decode("utf-8")
+        raw_bytes = resp.read()
 
-    rows = list(csv.DictReader(io.StringIO(raw)))
-    if len(rows) < 2:
-        return None  # brak wystarczających danych (np. zły symbol, święto)
+    # Stooq bywa niekonsekwentne z kodowaniem nagłówków (polskie znaki jak "ę").
+    # Zamiast polegać na nazwach kolumn, czytamy po POZYCJI - odporne na to,
+    # jak dokładnie nazywa się kolumna czy jakie ma kodowanie.
+    # Format Stooq to zawsze: Data,Otwarcie,Najwyzszy,Najnizszy,Zamkniecie,Wolumen
+    raw = raw_bytes.decode("utf-8", errors="replace")
+    rows = list(csv.reader(io.StringIO(raw)))
 
-    last = rows[-1]
-    prev = rows[-2]
-    close = float(last["Zamknięcie"])
-    prev_close = float(prev["Zamknięcie"])
+    data_rows = rows[1:] if len(rows) > 1 else []  # pomiń nagłówek
+    if len(data_rows) < 2:
+        print(f"  [debug {symbol}] surowa odpowiedź (pierwsze 200 znaków): {raw[:200]!r}")
+        return None  # brak wystarczających danych (np. zły symbol, święto, błąd zapytania)
+
+    last = data_rows[-1]
+    prev = data_rows[-2]
+
+    # Kolumna 0 = Data, kolumna 4 = Zamkniecie (indeksy liczone od 0)
+    if len(last) < 5 or len(prev) < 5:
+        return None
+
+    close = float(last[4])
+    prev_close = float(prev[4])
     change_pct = ((close - prev_close) / prev_close) * 100 if prev_close else 0.0
 
     return {
-        "date": last["Data"],
+        "date": last[0],
         "close": round(close, 4),
         "change_pct": round(change_pct, 2),
     }
