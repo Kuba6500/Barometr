@@ -2,9 +2,9 @@
   "sentiment_score": 0.0,
   "sentiment_label": "Brak danych",
   "headline": "Brak danych rynkowych – podsumowanie dnia niemożliwe do przygotowania.",
-  "overview": "Na dziś nie otrzymaliśmy żadnych danych o cenach ani zmianach aktywów, dlatego nie jesteśmy w stanie opisać tego, co wydarzyło się na rynkach. Może to wynikać z błędu w dostarczeniu danych, dnia wolnego na głównych giełdach lub innego problemu technicznego. Zamiast zgadywać lub tworzyć treść z powietrza, uczciwie informujemy o braku podstaw do analizy.",
+  "overview": "Na dzisiaj nie otrzymaliśmy żadnych danych o zamknięciach ani zmianach cen aktywów. Może to wynikać z błędu w źródle danych, dnia wolnego od handlu lub innego problemu technicznego. Zamiast spekulować, uczciwie informujemy: dziś nie ma czego analizować.",
   "assets": [],
-  "disclaimer": "To jest materiał wyłącznie edukacyjny i informacyjny. Nie stanowi porady inwestycyjnej, rekomendacji zakupu ani sprzedaży jakichkolwiek instrumentów finansowych. Wszelkie decyzje inwestycyjne podejmujesz na własną odpowiedzialność.",
-  "date": "2026-08-31",
+  "disclaimer": "To materiał wyłącznie edukacyjny, przygotowany na podstawie dostarczonych danych rynkowych. Nie stanowi porady inwestycyjnej ani rekomendacji zakupu lub sprzedaży jakichkolwiek instrumentów finansowych.",
+  "date": "2026-09-01",
   "raw_assets": []
 }
