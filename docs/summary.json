@@ -1,10 +1,10 @@
 {
   "sentiment_score": 0,
   "sentiment_label": "Brak danych",
-  "headline": "Brak danych rynkowych – nie można ocenić dzisiejszego dnia.",
-  "overview": "Dla daty 2026-09-03 nie otrzymaliśmy żadnych danych o cenach ani zmianach aktywów. Może to wynikać z błędu w źródle danych, dnia wolnego od handlu lub problemu technicznego. Bez konkretnych liczb nie ma podstaw do formułowania jakichkolwiek wniosków rynkowych.",
+  "headline": "Brak danych rynkowych – nie można ocenić sytuacji na dziś.",
+  "overview": "Na potrzeby tego briefingu nie przekazano żadnych danych o aktywach z dnia 4 września 2026 r. Bez konkretnych zamknięć i zmian procentowych nie jest możliwe rzetelne opisanie tego, co wydarzyło się na rynkach. Zamiast spekulować lub wypełniać luki domysłami, informujemy wprost: dzisiejsze podsumowanie nie może zostać wygenerowane.",
   "assets": [],
-  "disclaimer": "To jest materiał wyłącznie edukacyjny i informacyjny. Nie stanowi porady inwestycyjnej ani rekomendacji zakupu lub sprzedaży jakichkolwiek instrumentów finansowych.",
-  "date": "2026-09-03",
+  "disclaimer": "To jest materiał wyłącznie edukacyjny i informacyjny. Nie stanowi porady inwestycyjnej, rekomendacji ani zachęty do jakichkolwiek działań na rynkach finansowych.",
+  "date": "2026-09-04",
   "raw_assets": []
 }
