@@ -1,10 +1,10 @@
 {
   "sentiment_score": 0.0,
   "sentiment_label": "Brak danych",
-  "headline": "Brak danych rynkowych – nie ma podstaw do oceny dzisiejszego dnia.",
-  "overview": "Na dzień 11 września 2026 roku nie zostały dostarczone żadne dane rynkowe do analizy. Nie jesteśmy w stanie opisać ani kierunku rynków, ani zachowania poszczególnych aktywów. Zamiast spekulować lub uzupełniać luki własnymi domysłami, informujemy wprost: dzisiejsze podsumowanie nie może zostać rzetelnie przygotowane.",
+  "headline": "Brak danych rynkowych dla wskazanej daty – podsumowanie niemożliwe.",
+  "overview": "Na potrzeby dzisiejszego briefingu nie otrzymano żadnych danych rynkowych (lista aktywów jest pusta). Może to wynikać z błędu technicznego, niedostępności źródła lub tego, że wskazana data (14 września 2026) wykracza poza dostępne dane. Nie jest możliwe rzetelne opisanie sytuacji rynkowej bez konkretnych liczb – zamiast spekulować, informujemy o tym wprost.",
   "assets": [],
-  "disclaimer": "Ten materiał ma charakter wyłącznie edukacyjny i informacyjny. Nie stanowi porady inwestycyjnej, rekomendacji ani zachęty do podejmowania jakichkolwiek decyzji finansowych. Wszelkie decyzje inwestycyjne podejmujesz na własną odpowiedzialność.",
-  "date": "2026-09-11",
+  "disclaimer": "To jest materiał wyłącznie edukacyjny i informacyjny, a nie porada inwestycyjna. Nie stanowi rekomendacji zakupu ani sprzedaży jakichkolwiek instrumentów finansowych. Wszelkie decyzje inwestycyjne podejmujesz na własną odpowiedzialność.",
+  "date": "2026-09-14",
   "raw_assets": []
 }
